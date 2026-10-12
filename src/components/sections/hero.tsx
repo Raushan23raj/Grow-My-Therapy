@@ -1,7 +1,6 @@
 import type { SiteContent } from "@/content/types";
 import { Accent, Eyebrow, Photo, TextLink } from "../ui";
 
-/* Desktop positions are the original's 1536px layout expressed in vw. */
 
 export function Hero({ hero }: { hero: SiteContent["hero"] }) {
   return (

@@ -1,10 +1,5 @@
 import type { SiteContent } from "./types";
 
-/**
- * Homepage copy for Dr. Maya Reynolds, PsyD. Every claim here comes from her
- * profile: Santa Monica office, adults only, anxiety / panic / trauma / burnout,
- * CBT + EMDR + mindfulness + body-oriented work, in-person and CA telehealth.
- */
 
 export const OFFICE_ADDRESS = {
   street: "123th Street 45 W",
@@ -14,7 +9,7 @@ export const OFFICE_ADDRESS = {
 };
 
 const fullAddress = `${OFFICE_ADDRESS.street}, ${OFFICE_ADDRESS.city}, ${OFFICE_ADDRESS.region} ${OFFICE_ADDRESS.postalCode}`;
-// Placeholder until the practice connects its scheduling tool (e.g. SimplePractice).
+
 export const BOOKING_URL = "#contact";
 
 const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;

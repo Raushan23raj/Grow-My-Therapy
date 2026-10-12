@@ -1,11 +1,7 @@
-/**
- * Shape of everything the homepage renders. Headings support two inline marks:
- * `*word*` renders in the handwritten accent font and `_phrase_` in italics.
- */
+
 export type Img = {
   src: string;
   alt: string;
-  /** CSS object-position, for photos whose subject is off-center. */
   position?: string;
 };
 
@@ -18,7 +14,6 @@ export type SiteContent = {
     name: string;
     tagline: string;
     href: string;
-    /** When set, the brand renders as this image instead of the text wordmark. */
     logo?: Img & { width: number; height: number };
   };
   nav: NavItem[];
@@ -60,7 +55,6 @@ export type SiteContent = {
     title: string;
     items: { id?: string; title: string; text: string; link: Link }[];
   };
-  /** Part 3 custom section; only the redesign has one. */
   office?: {
     eyebrow: string;
     title: string;

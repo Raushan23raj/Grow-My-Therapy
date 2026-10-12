@@ -13,7 +13,6 @@ const nextConfig: NextConfig = {
   },
   images: {
     qualities: [75, 85],
-    // The /clone route renders the original template's photos straight from its CDN.
     remotePatterns: [{ protocol: "https", hostname: "images.squarespace-cdn.com" }],
   },
 };

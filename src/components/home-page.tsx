@@ -15,7 +15,6 @@ import { SiteHeader } from "./site-header";
 
 export type Theme = "maya" | "conejo";
 
-/** The template's section order; `office` and `faq` only render when provided. */
 export function HomePage({ content, theme }: { content: SiteContent; theme: Theme }) {
   return (
     <div className={`theme-${theme} min-h-screen bg-canvas font-sans font-light text-ink`}>

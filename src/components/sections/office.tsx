@@ -3,11 +3,7 @@ import { Accent, Eyebrow, Photo, TextLink } from "../ui";
 
 type Office = NonNullable<SiteContent["office"]>;
 
-/**
- * Part 3 custom section. It borrows the template's own patterns (eyebrow +
- * serif title, hairline-ruled list, staggered photos) so it reads as part of
- * the original design rather than a bolt-on.
- */
+
 export function OfficeSection({ office }: { office: Office }) {
   const [main, secondary] = office.images;
 

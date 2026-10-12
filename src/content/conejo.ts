@@ -1,10 +1,5 @@
 import type { SiteContent } from "./types";
 
-/**
- * Part 1: faithful copy of https://www.conejovalleycounseling.com/home, used to
- * check layout accuracy before the redesign. Photos load from the original CDN
- * and inner links point back at the original site.
- */
 
 const CDN = "https://images.squarespace-cdn.com/content/v1/670423e106da6c036366fd10";
 const SITE = "https://www.conejovalleycounseling.com";

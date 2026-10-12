@@ -4,7 +4,6 @@ import type { Img, Link } from "@/content/types";
 
 const MARKS = /(\*[^*]+\*|_[^_]+_)/g;
 
-/** Renders `*word*` in the script accent font and `_phrase_` in italics. */
 export function Accent({ text }: { text: string }) {
   return (
     <>
@@ -39,7 +38,6 @@ function linkProps(href: string) {
   return isExternal(href) ? { target: "_blank", rel: "noopener noreferrer" } : {};
 }
 
-/** Small uppercase link with an underline, the template's default button. */
 export function TextLink({ link, className = "" }: { link: Link; className?: string }) {
   return (
     <a
@@ -52,7 +50,6 @@ export function TextLink({ link, className = "" }: { link: Link; className?: str
   );
 }
 
-/** Outlined oval button used for "Contact" and "Book now". */
 export function PillLink({ link, className = "" }: { link: Link; className?: string }) {
   return (
     <a
@@ -65,7 +62,6 @@ export function PillLink({ link, className = "" }: { link: Link; className?: str
   );
 }
 
-/** A photo that covers its (positioned) parent box. */
 export function Photo({
   image,
   sizes,
