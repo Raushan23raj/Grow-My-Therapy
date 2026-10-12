@@ -2,8 +2,8 @@
 
 A responsive homepage clone and creative redesign built for the **Grow My Therapy** assignment. The layout is based on [Conejo Valley Counseling](https://www.conejovalleycounseling.com/home), re-themed with new copy, colors, and images for an imaginary therapist, Dr. Maya Reynolds.
 
-🔗 **Live Site:** [your-vercel-link]
-🎥 **Video Walkthrough:** [your-loom-link]
+🔗 Live Site:   https://grow-my-therapy-wine.vercel.app/
+🎥 Video Walkthrough:
 
 ## Tech Stack
 
