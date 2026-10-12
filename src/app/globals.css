@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/*
+ * Every color in the UI comes from these tokens. A page picks its palette by
+ * wrapping itself in one theme class, so the clone and the redesign share the
+ * exact same components and only swap variables.
+ */
+@theme inline {
+  --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-mulish), "Segoe UI", system-ui, sans-serif;
+  --font-script: var(--font-sacramento), cursive;
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-ink: var(--ink);
+  --color-heading: var(--heading);
+  --color-accent: var(--accent);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-line: var(--line);
+}
+
+/* Type scale measured from the original template at 1536px, made fluid. */
+@theme {
+  --text-display: clamp(2.5rem, 4.15vw, 4.6rem);
+  --text-display--line-height: 1.25;
+  --text-display--letter-spacing: -0.01em;
+  --text-title: clamp(2.05rem, 3.3vw, 3.65rem);
+  --text-title--line-height: 1.3;
+  --text-title--letter-spacing: -0.01em;
+  --text-subtitle: clamp(1.85rem, 2.7vw, 3rem);
+  --text-subtitle--line-height: 1.32;
+  --text-subtitle--letter-spacing: -0.01em;
+  --text-card: clamp(1.45rem, 1.85vw, 2.05rem);
+  --text-card--line-height: 1.36;
+  --text-body: 1.05rem;
+  --text-body--line-height: 1.8;
+  --text-small: 0.9375rem;
+  --text-small--line-height: 1.8;
+  --text-button: 0.765rem;
+  --text-button--letter-spacing: 0.12em;
+}
+
+/* Part 1: the original Conejo Valley palette. */
+.theme-conejo {
+  --canvas: #f6f4ee;
+  --surface: #ffffff;
+  --muted: #e3d9ca;
+  --ink: #2b2b2b;
+  --heading: #2b2b2b;
+  --accent: #86b3b3;
+  --primary: #86b3b3;
+  --on-primary: #2b2b2b;
+  --line: rgb(43 43 43 / 0.16);
+  --overlay: rgb(25 22 18 / 0.32);
+}
+
+/*
+ * Part 2: "Sage & Clay" for Dr. Maya Reynolds. Eucalyptus sage (primary),
+ * warm oat and sage mist (secondary), and a terracotta clay accent pulled from
+ * the brick walls and warm wood of her Santa Monica office.
+ */
+.theme-maya {
+  --canvas: #f4efe7;
+  --surface: #fbf9f5;
+  --muted: #dfe3d6;
+  --ink: #34382f;
+  --heading: #2f3a2e;
+  --accent: #9c563b;
+  --primary: #4f5e4b;
+  --on-primary: #f4efe7;
+  --line: rgb(47 58 46 / 0.17);
+  --overlay: linear-gradient(to top, rgb(30 33 26 / 0.72), rgb(30 33 26 / 0.18) 70%);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+[id] {
+  scroll-margin-top: 1.5rem;
+}
+
+/* Handwritten accent word inside serif headings ("thrive", "help", ...). */
+.script-accent {
+  font-family: var(--font-script);
+  color: var(--accent);
+  font-size: 1.3em;
+  line-height: 0;
+  letter-spacing: 0;
+  padding-inline: 0.06em;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--surface);
+}
