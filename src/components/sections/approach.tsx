@@ -18,7 +18,7 @@ export function Approach({ approach }: { approach: SiteContent["approach"] }) {
         </div>
         <TextLink link={approach.button} className="mt-10 lg:mt-[6.4vw]" />
       </div>
-      <div className="relative aspect-[4/5] w-full sm:aspect-[4/3] lg:ml-auto lg:aspect-[346/722] lg:w-[22.75vw]">
+      <div className="relative aspect-[2/3] w-full lg:ml-auto lg:aspect-[346/722] lg:w-[22.75vw]">
         <Photo image={approach.image} sizes="(min-width: 1024px) 23vw, 100vw" />
       </div>
     </section>
